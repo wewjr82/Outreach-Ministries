@@ -52,26 +52,24 @@ const galleryData = [
 ];
 
 const gallery = document.getElementById("gallery");
+const batchSize = 10;
+let currentIndex = 0;
 
-galleryData.forEach((img, index) => {
+function createFigure(img) {
   const figure = document.createElement("figure");
-  figure.classList.add(`pic${index + 1}`);
 
   const picture = document.createElement("picture");
 
-  // WebP source
   const source = document.createElement("source");
   const webpFilename = img.filename.replace(".jpg", ".webp");
-  source.setAttribute("srcset", `images/webp/${webpFilename}`);
+  source.setAttribute("data-srcset", `images/webp/${webpFilename}`);
   source.setAttribute("type", "image/webp");
 
-  // Fallback JPEG
   const image = document.createElement("img");
-  image.setAttribute("src", `images/${img.filename}`);
-  image.setAttribute("loading", "lazy");
+  image.setAttribute("data-src", `images/${img.filename}`);
   image.setAttribute("alt", img.caption);
+  image.setAttribute("loading", "lazy");
 
-  // Caption
   const caption = document.createElement("figcaption");
   caption.textContent = img.caption;
 
@@ -80,4 +78,49 @@ galleryData.forEach((img, index) => {
   figure.appendChild(picture);
   figure.appendChild(caption);
   gallery.appendChild(figure);
-});
+
+  observeImage(image);
+}
+
+function loadBatch() {
+  const batch = galleryData.slice(currentIndex, currentIndex + batchSize);
+  batch.forEach(createFigure);
+  currentIndex += batchSize;
+
+  if (currentIndex < galleryData.length) {
+    requestIdleCallback(loadBatch);
+  }
+}
+
+const observer =
+  "IntersectionObserver" in window
+    ? new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const picture = img.parentElement;
+              const source = picture.querySelector("source");
+
+              if (img.dataset.src) img.src = img.dataset.src;
+              if (source && source.dataset.srcset)
+                source.srcset = source.dataset.srcset;
+
+              obs.unobserve(img);
+            }
+          });
+        },
+        { rootMargin: "100px" }
+      )
+    : null;
+
+function observeImage(img) {
+  if (observer) {
+    observer.observe(img);
+  } else {
+    img.src = img.dataset.src;
+  }
+}
+
+loadBatch();
+
