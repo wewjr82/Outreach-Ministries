@@ -1,7 +1,7 @@
 const galleryData = [
   { filename: "1000012122.jpg", caption: "Summer 2014" },
   { filename: "1000012123.jpg", caption: "Death valley" },
-  { filename: "1000012124.jpg", caption: "Early morning" },
+  { filename: "1000012124.jpg", caption: "Early morning1" },
   { filename: "1000012125.jpg", caption: "Lost." },
   { filename: "image000000(1).jpg", caption: "Why now?" },
   { filename: "image000000.jpg", caption: "Verbier 10.08.2002" },
@@ -10,7 +10,7 @@ const galleryData = [
   { filename: "image000004.jpg", caption: "Torino 2013" },
   { filename: "image000005.jpg", caption: "Summer 2014" },
   { filename: "image000006.jpg", caption: "Death valley" },
-  { filename: "image000007(1).jpg", caption: "Early morning" },
+  { filename: "image000007(1).jpg", caption: "Early morning2" },
   { filename: "image000007(2).jpg", caption: "Lost." },
   { filename: "image000007.jpg", caption: "#Brooklyn" },
   { filename: "image000008.jpg", caption: "Why now?" },
@@ -20,7 +20,7 @@ const galleryData = [
   { filename: "IMG_2147.jpg", caption: "Torino 2013" },
   { filename: "IMG_3895.jpg", caption: "Summer 2014" },
   { filename: "IMG_3896.jpg", caption: "Death valley" },
-  { filename: "IMG_3898.jpg", caption: "Early morning" },
+  { filename: "IMG_3898.jpg", caption: "Early morning3" },
   { filename: "IMG_3899.jpg", caption: "Lost." },
   { filename: "IMG_3906.jpg", caption: "#Brooklyn" },
   { filename: "IMG_3907.jpg", caption: "Why now?" },
@@ -30,7 +30,7 @@ const galleryData = [
   { filename: "IMG_3912.jpg", caption: "Torino 2013" },
   { filename: "IMG_3917.jpg", caption: "Summer 2014" },
   { filename: "IMG_4180.jpg", caption: "Death valley" },
-  { filename: "IMG_4210.jpg", caption: "Early morning" },
+  { filename: "IMG_4210.jpg", caption: "Early morning4" },
   { filename: "IMG_4213.jpg", caption: "Lost." },
   { filename: "IMG_4214.jpg", caption: "#Brooklyn" },
   { filename: "IMG_4217.jpg", caption: "Why now?" },
@@ -52,6 +52,8 @@ const galleryData = [
 ];
 
 const gallery = document.getElementById("gallery");
+
+const seeMoreBtn = document.getElementById("see-more-btn");
 const batchSize = 10;
 let currentIndex = 0;
 
@@ -87,8 +89,9 @@ function loadBatch() {
   batch.forEach(createFigure);
   currentIndex += batchSize;
 
-  if (currentIndex < galleryData.length) {
-    requestIdleCallback(loadBatch);
+  // Hide button if all images are loaded
+  if (currentIndex >= galleryData.length) {
+    seeMoreBtn.style.display = "none";
   }
 }
 
@@ -122,5 +125,10 @@ function observeImage(img) {
   }
 }
 
+// Initial batch
 loadBatch();
+
+// On click, load next batch
+seeMoreBtn.addEventListener("click", loadBatch);
+
 
