@@ -166,10 +166,9 @@
       <h2>Gallery</h2>
       <div id="background">
         <div id="gallery"></div>
-        <div style="text-align: center; margin-top: 1rem;">
+        <div style="text-align: center; margin-top: 1rem">
           <button id="see-more-btn">See More</button>
         </div>
-        
       </div>
     </section>
 
@@ -177,11 +176,33 @@
     <section class="section tickets">
       <h2>Warring Through Our Worship Conference</h2>
       <div class="ticket-content">
-        <img
-          src="images/flyer.jpg"
-          alt="Warring Through Our Worship Conference Flyer"
-          class="ticket-flyer"
-        />
+        <picture>
+          <!-- WebP version for modern browsers -->
+          <source
+            srcset="
+              images/webp/flyer-990.webp.webp   990w,
+              images/webp/flyer-1980.webp.webp 1980w,
+              images/webp/flyer-2970.webp.webp 2970w
+            "
+            type="image/webp"
+            sizes="(max-width: 600px) 100vw, 990px"
+          />
+
+          <!-- Fallback JPGs for older browsers -->
+          <img
+            src="images/flyer-990.jpg.jpg"
+            srcset="
+              images/flyer-990.jpg.jpg   990w,
+              images/flyer-1980.jpg.jpg 1980w,
+              images/flyer-2970.jpg.jpg 2970w
+            "
+            sizes="(max-width: 600px) 100vw, 990px"
+            alt="Warring Through Our Worship Conference Flyer"
+            class="ticket-flyer"
+            loading="lazy"
+          />
+        </picture>
+
         <a
           href="https://www.eventbrite.com/e/the-outreach-example-tickets-1475647945729?aff=oddtdtcreator"
           target="_blank"
@@ -191,14 +212,8 @@
         </a>
       </div>
     </section>
-    
-    
-    
-    
-<!-- END TICKET SECTION -->
 
-
-
+    <!-- END TICKET SECTION -->
 
     <section class="section blog">
       <h2>Encouraging Words Blog</h2>
@@ -215,6 +230,5 @@
     </footer>
 
     <script src="main.js" defer></script>
-
   </body>
 </html>
