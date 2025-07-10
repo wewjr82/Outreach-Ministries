@@ -212,11 +212,49 @@
   color: purple;
   padding: 40px 20px;
   text-align: center;
+  
 }
+
 .section.tickets h2 {
   font-size: 2.4rem;
   margin-bottom: 2rem;
 }
+
+.ticket-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.ticket-flyer {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+
+.register-button {
+  background-color: purple;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+.register-button:hover {
+  background-color: gold;
+  color: purple;
+}
+
 
 
   /* Newsletter form */
