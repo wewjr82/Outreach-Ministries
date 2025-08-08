@@ -38,7 +38,7 @@ body {
 /* LAYOUT
   /*******************************************/
 
-  .navbar {
+.navbar {
   position: sticky;
   top: 0;
   background-color: purple; /* Purple */
@@ -98,7 +98,6 @@ header {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  
 }
 
 @media (min-width: 600px) {
@@ -111,7 +110,7 @@ header {
   #gallery {
     column-count: 3;
   }
-} 
+}
 
 @media (min-width: 1200px) {
   #gallery {
@@ -141,9 +140,9 @@ footer {
 /* INNER STYLES
   /*******************************************/
 
-  /* ===== NAV STYLES ===== */
+/* ===== NAV STYLES ===== */
 
-  .navbar ul {
+.navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -158,7 +157,7 @@ footer {
   text-decoration: none;
   color: gold;
   font-weight: bold;
-  font-size: 16px;
+  
 }
 
 .navbar a:hover {
@@ -385,71 +384,7 @@ header h2 {
 /* MOBILE STYLES
   /*******************************************/
 
-@media (max-width: 320px) {
-  /* header {
-    width: 100%;
-  } */
-
-  header img.logo {
-    width: 50%;
-  }
-
-  /* .sectiom {
-    flex-basis: 100%;
-    text-align: center;
-  } */
-
-  .intro {
-    margin: 0;
-    
-    
-  }
-
-  .section h2 {
-    font-size: 16px;
-  }
-
-  .section h3 {
-    padding-bottom: 10px;
-  }
-
-   .circle-parent {
-    width: 100%;
-    max-width: 30em;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    shape-outside: none;
-    float: none;
-    margin: 0 auto 1em;
-  }
-
-  .circle-parent img {
-    width: 100%;
-    height: 100%; 
-    display: block;
-    object-fit: cover;       
-    object-position: center; 
-    margin: 0;
-    padding: 0;             
-  }
-
-  .intro p {
-    display: none;
-  }
-
-  .mission,
-  .vision,
-  .beliefs p {
-    font-size: medium;
-  }
-
-  .gallery{
-    display: none;
-  }
-
+@media (max-width: 480px) {
   .navbar {
     text-align: left;
     padding: 10px;
@@ -474,24 +409,325 @@ header h2 {
     margin: 0.5em 0;
   }
 
-   .navbar li:nth-child(3) {
+  .navbar li:nth-child(3) {
+    display: none;
+  }
+
+  header img.logo {
+    width: 50%;
+  }
+
+  .intro {
+    margin: 0;
+  }
+
+  .section h2 {
+    font-size: 16px;
+  }
+
+  .section h3 {
+    padding-bottom: 10px;
+  }
+
+  .circle-parent {
+    width: 100%;
+    max-width: 30em;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    shape-outside: none;
+    float: none;
+    margin: 0 auto 1em;
+  }
+
+  .circle-parent img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro p {
+    display: none;
+  }
+
+  .mission,
+  .vision,
+  .beliefs p {
+    font-size: medium;
+  }
+
+  .gallery {
     display: none;
   }
 
   .section.tickets h2 {
-  font-size: 1.5rem;
-  
+    font-size: 1.5rem;
+  }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: purple;
+    padding: 10px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 0.5em 0;
+  }
+
+  .navbar li:nth-child(3) {
+    display: none;
+  }
+
+  header img.logo {
+    width: 50%;
+  }
+
+  .intro {
+    margin: 0;
+  }
+
+  .section h2 {
+    font-size: 16px;
+  }
+
+  .section h3 {
+    padding-bottom: 10px;
+  }
+
+  .circle-parent {
+    width: 100%;
+    max-width: 30em;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    shape-outside: none;
+    float: none;
+    margin: 0 auto 1em;
+  }
+
+  .circle-parent img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro p {
+    display: none;
+  }
+
+  .mission,
+  .vision,
+  .beliefs p {
+    font-size: medium;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .section.tickets h2 {
+    font-size: 1.5rem;
+  }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    text-align: left;
+    padding: 10px;
+  }
 
+  .hamburger {
+    display: block;
+  }
 
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: purple;
+    padding: 10px;
+  }
 
+  .navbar ul.active {
+    display: flex;
+  }
 
+  .navbar li {
+    margin: 0.5em 0;
+  }
 
+  .navbar li:nth-child(3) {
+    display: none;
+  }
 
+  header img.logo {
+    width: 50%;
+  }
 
+  .intro {
+    margin: 0;
+  }
 
+  .section h2 {
+    font-size: 16px;
+  }
 
+  .section h3 {
+    padding-bottom: 10px;
+  }
 
+  .circle-parent {
+    width: 100%;
+    max-width: 30em;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    shape-outside: none;
+    float: none;
+    margin: 0 auto 1em;
+  }
 
+  .circle-parent img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro p {
+    display: none;
+  }
+
+  .mission,
+  .vision,
+  .beliefs p {
+    font-size: medium;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .section.tickets h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: purple;
+    padding: 10px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 0.5em 0;
+  }
+
+  .navbar li:nth-child(3) {
+    display: none;
+  }
+
+  header img.logo {
+    width: 50%;
+  }
+
+  .intro {
+    margin: 0;
+  }
+
+  .section h2 {
+    font-size: 16px;
+  }
+
+  .section h3 {
+    padding-bottom: 10px;
+  }
+
+  .circle-parent {
+    width: 100%;
+    max-width: 30em;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    shape-outside: none;
+    float: none;
+    margin: 0 auto 1em;
+  }
+
+  .circle-parent img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro p {
+    display: none;
+  }
+
+  .mission,
+  .vision,
+  .beliefs p {
+    font-size: medium;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .section.tickets h2 {
+    font-size: 1.5rem;
+  }
+}
