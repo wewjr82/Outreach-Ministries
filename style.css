@@ -19,7 +19,7 @@ html {
   /*******************************************/
 
 body {
-  font-size: 1.6rem; /* 16px */
+  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -157,7 +157,6 @@ footer {
   text-decoration: none;
   color: gold;
   font-weight: bold;
-  
 }
 
 .navbar a:hover {
@@ -421,10 +420,6 @@ header h2 {
     margin: 0;
   }
 
-  .section h2 {
-    font-size: 16px;
-  }
-
   .section h3 {
     padding-bottom: 10px;
   }
@@ -456,18 +451,8 @@ header h2 {
     display: none;
   }
 
-  .mission,
-  .vision,
-  .beliefs p {
-    font-size: medium;
-  }
-
   .gallery {
     display: none;
-  }
-
-  .section.tickets h2 {
-    font-size: 1.5rem;
   }
 }
 
@@ -508,10 +493,6 @@ header h2 {
     margin: 0;
   }
 
-  .section h2 {
-    font-size: 16px;
-  }
-
   .section h3 {
     padding-bottom: 10px;
   }
@@ -543,18 +524,8 @@ header h2 {
     display: none;
   }
 
-  .mission,
-  .vision,
-  .beliefs p {
-    font-size: medium;
-  }
-
   .gallery {
     display: none;
-  }
-
-  .section.tickets h2 {
-    font-size: 1.5rem;
   }
 }
 
@@ -595,10 +566,6 @@ header h2 {
     margin: 0;
   }
 
-  .section h2 {
-    font-size: 16px;
-  }
-
   .section h3 {
     padding-bottom: 10px;
   }
@@ -630,18 +597,8 @@ header h2 {
     display: none;
   }
 
-  .mission,
-  .vision,
-  .beliefs p {
-    font-size: medium;
-  }
-
   .gallery {
     display: none;
-  }
-
-  .section.tickets h2 {
-    font-size: 1.5rem;
   }
 }
 
@@ -682,10 +639,6 @@ header h2 {
     margin: 0;
   }
 
-  .section h2 {
-    font-size: 16px;
-  }
-
   .section h3 {
     padding-bottom: 10px;
   }
@@ -717,17 +670,7 @@ header h2 {
     display: none;
   }
 
-  .mission,
-  .vision,
-  .beliefs p {
-    font-size: medium;
-  }
-
   .gallery {
     display: none;
-  }
-
-  .section.tickets h2 {
-    font-size: 1.5rem;
   }
 }
