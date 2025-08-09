@@ -1,16 +1,46 @@
 const galleryData = [
   { filename: "1000012122.jpg", caption: "Summer 2014" },
-  { filename: "1000012123.jpg", caption: "Death valley" },
-  { filename: "1000012124.jpg", caption: "Early morning1" },
-  { filename: "1000012125.jpg", caption: "Lost." },
-  { filename: "image000000(1).jpg", caption: "Why now?" },
-  { filename: "image000000.jpg", caption: "Verbier 10.08.2002" },
-  { filename: "image000002.jpg", caption: "My temporary home" },
-  { filename: "image000003.jpg", caption: "Love" },
-  { filename: "image000004.jpg", caption: "Torino 2013" },
-  { filename: "image000005.jpg", caption: "Summer 2014" },
-  { filename: "image000006.jpg", caption: "Death valley" },
-  { filename: "image000007(1).jpg", caption: "Early morning2" },
+  { filename: "1000012123.jpg", caption: "Growing in the Word" },
+  {
+    filename: "1000012124.jpg",
+    caption: "Starting the day with prayer and purpose",
+  },
+  {
+    filename: "1000012125.jpg",
+    caption: "Hands ready to serve the Lord’s work",
+  },
+  {
+    filename: "image000000(1).jpg",
+    caption: "Rejoicing in the fellowship of believers",
+  },
+  {
+    filename: "image000000.jpg",
+    caption: "Serving others through acts of kindness",
+  },
+  {
+    filename: "image000002.jpg",
+    caption: "Working joyfully in the vineyard of the Lord",
+  },
+  {
+    filename: "image000003.jpg",
+    caption: "Strengthened by fellowship and prayer",
+  },
+  {
+    filename: "image000004.jpg",
+    caption: "Giving thanks for the gift of fellowship",
+  },
+  {
+    filename: "image000005.jpg",
+    caption: "God’s love shines through our community",
+  },
+  {
+    filename: "image000006.jpg",
+    caption: " Holding onto the precious memories of God’s goodness",
+  },
+  {
+    filename: "image000007(1).jpg",
+    caption: "United in faith through the study of scripture",
+  },
   { filename: "image000007(2).jpg", caption: "Lost." },
   { filename: "image000007.jpg", caption: "#Brooklyn" },
   { filename: "image000008.jpg", caption: "Why now?" },
